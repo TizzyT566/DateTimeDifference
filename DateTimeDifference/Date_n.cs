@@ -5,7 +5,7 @@ public class Date_n
     private static readonly int[] daysPerMonth = new int[] { 31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     private readonly int _day, _month, _year;
 
-    private bool IsLeapYear() => _year % 4 == 0 && _year % 100 != 0;
+    private bool IsLeapYear() => _year % 400 == 0 || (_year % 4 == 0 && _year % 100 != 0);
 
     private int DaysLeftInYear()
     {
